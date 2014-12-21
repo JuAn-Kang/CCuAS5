@@ -54,9 +54,9 @@ SRC = \
     SemanticAnalysis/IdEntry.java \
     SemanticAnalysis/ScopeStack.java \
     SemanticAnalysis/SemanticAnalysis.java \
-    CodeGen/Emitter.java \
-    CodeGen/Frame.java \
     CodeGen/JVM.java \
+    CodeGen/Frame.java \
+    CodeGen/Emitter.java \
     Unparser/UnparseVisitor.java \
     Unparser/Unparser.java \
     StdEnvironment.java \
