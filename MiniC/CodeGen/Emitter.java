@@ -4,6 +4,8 @@ import java.io.*;
 import MiniC.AstGen.*;
 import MiniC.StdEnvironment;
 import MiniC.ErrorReporter;
+import MiniC.CodeGen.Frame;
+import MiniC.CodeGen.JVM;
 
 public class Emitter implements Visitor {
 
