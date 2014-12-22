@@ -38,7 +38,6 @@ JC = javac
 SRC = \
     lang/System.java \
     ErrorReporter.java \
-    MiniC.java \
     TreeDrawer/DrawerFrame.java \
     TreeDrawer/Polygon.java \
     TreeDrawer/Drawer.java \
@@ -61,6 +60,7 @@ SRC = \
     Unparser/UnparseVisitor.java \
     Unparser/Unparser.java \
     StdEnvironment.java \
+    MiniC.java \
     AstGen/StringExpr.java \
     AstGen/ExprSequence.java \
     AstGen/StmtSequence.java \
