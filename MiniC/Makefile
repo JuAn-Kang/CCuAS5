@@ -38,6 +38,7 @@ JC = javac
 SRC = \
     lang/System.java \
     ErrorReporter.java \
+    MiniC.java \
     TreeDrawer/DrawerFrame.java \
     TreeDrawer/Polygon.java \
     TreeDrawer/Drawer.java \
