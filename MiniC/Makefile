@@ -48,19 +48,21 @@ SRC = \
     TreePrinter/TreePrinterVisitor.java \
     TreePrinter/Printer.java \
     Parser/SyntaxError.java \
+    Parser/Parser.java \
     Scanner/SourceFile.java \
     Scanner/Token.java \
+    Scanner/Scanner.java \
     Scanner/SourcePos.java \
     SemanticAnalysis/IdEntry.java \
     SemanticAnalysis/ScopeStack.java \
     SemanticAnalysis/SemanticAnalysis.java \
-    CodeGen/JVM.java \
-    CodeGen/Frame.java \
     CodeGen/Emitter.java \
+    CodeGen/Frame.java \
+    CodeGen/JVM.java \
     Unparser/UnparseVisitor.java \
     Unparser/Unparser.java \
-    StdEnvironment.java \
     MiniC.java \
+    StdEnvironment.java \
     AstGen/StringExpr.java \
     AstGen/ExprSequence.java \
     AstGen/StmtSequence.java \
