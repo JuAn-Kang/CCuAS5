@@ -59,6 +59,7 @@ SRC = \
     CodeGen/JVM.java \
     Unparser/UnparseVisitor.java \
     Unparser/Unparser.java \
+    MiniC.java \
     StdEnvironment.java \
     AstGen/StringExpr.java \
     AstGen/ExprSequence.java \
