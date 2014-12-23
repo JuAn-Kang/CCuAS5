@@ -795,11 +795,34 @@ public class Emitter implements Visitor {
 			int L2 = frame.getNewLabel();
 			//TBD: implement the code template for && short circuit evaluation
 			//		from the lecture slides.
+			x.lAST.accept(this);
+			emit(JVM.IFEQ + " " + "Label" + L1);
+			x.rAST.accept(this);
+			emit(JVM.IFEQ + " " + "Label" + L1);
+			emit(JVM.ICONST_1);
+			emit(JVM.GOTO + " " + "Label" + L2);
+			emitLabel(L1);
+			emit(JVM.ICONST_0);
+			emitLabel(L2);
+			
 			return;
 		}
 		if(Op.equals("||")) {
 			//TBD: implement || short circuit evaluation.
 			//		Similar to &&, you may use a Java example to figure it out..
+			int L1 = frame.getNewLabel();
+			int L2 = frame.getNewLabel();
+			
+			x.lAST.accept(this);
+			emit(JVM.IFNE + " " + "Label" + L1);
+			x.rAST.accept(this);
+			emit(JVM.IFNE + " " + "Label" + L1);
+			emit(JVM.ICONST_0);
+			emit(JVM.GOTO + " " + "Label" + L2);
+			emitLabel(L1);
+			emit(JVM.ICONST_1);
+			emitLabel(L2);
+			
 			return;
 		}
 		/*
@@ -810,7 +833,93 @@ public class Emitter implements Visitor {
 		x.lAST.accept(this);
 		x.rAST.accept(this);
 		//TBD:
-		
+		if(Op.equals("+")) {
+			if(x.oAST.type.Tequal(StdEnvironment.intType)) {
+				emit(JVM.IADD);
+			} else {
+				emit(JVM.FADD);
+			}
+		} else if(Op.equals("-")) {
+			if(x.oAST.type.Tequal(StdEnvironment.intType)) {
+				emit(JVM.ISUB);
+			} else {
+				emit(JVM.FSUB);
+			}
+		} else if(Op.equals("*")) {
+			if(x.oAST.type.Tequal(StdEnvironment.intType)) {
+				emit(JVM.IMUL);
+			} else {
+				emit(JVM.FMUL);
+			}
+		} else if(Op.equals("/")) {
+			if(x.oAST.type.Tequal(StdEnvironment.intType)) {
+				emit(JVM.IDIV);
+			} else {
+				emit(JVM.FDIV);
+			}
+		} else if(Op.equals(">")) {
+			int L1 = frame.getNewLabel();
+			int L2 = frame.getNewLabel();
+			
+			emit(JVM.IF_ICMPGT + " " + "Label" + L1);
+			emit(JVM.ICONST_0);
+			emit(JVM.GOTO + " " + "Label" + L2);
+			emitLabel(L1);
+			emit(JVM.ICONST_1);
+			emitLabel(L2);
+		} else if(Op.equals(">=")) {
+			int L1 = frame.getNewLabel();
+			int L2 = frame.getNewLabel();
+			
+			emit(JVM.IF_ICMPGE + " " + "Label" + L1);
+			emit(JVM.ICONST_0);
+			emit(JVM.GOTO + " " + "Label" + L2);
+			emitLabel(L1);
+			emit(JVM.ICONST_1);
+			emitLabel(L2);		
+		} else if(Op.equals("<")) {
+			int L1 = frame.getNewLabel();
+			int L2 = frame.getNewLabel();
+			
+			emit(JVM.IF_ICMPLT + " " + "Label" + L1);
+			emit(JVM.ICONST_0);
+			emit(JVM.GOTO + " " + "Label" + L2);
+			emitLabel(L1);
+			emit(JVM.ICONST_1);
+			emitLabel(L2);		
+		} else if(Op.equals("<=")) {
+			int L1 = frame.getNewLabel();
+			int L2 = frame.getNewLabel();
+			
+			emit(JVM.IF_ICMPLE + " " + "Label" + L1);
+			emit(JVM.ICONST_0);
+			emit(JVM.GOTO + " " + "Label" + L2);
+			emitLabel(L1);
+			emit(JVM.ICONST_1);
+			emitLabel(L2);		
+		} else if(Op.equals("==")) {
+			int L1 = frame.getNewLabel();
+			int L2 = frame.getNewLabel();
+			
+			emit(JVM.IF_ICMPEQ + " " + "Label" + L1);
+			emit(JVM.ICONST_0);
+			emit(JVM.GOTO + " " + "Label" + L2);
+			emitLabel(L1);
+			emit(JVM.ICONST_1);
+			emitLabel(L2);
+		} else if(Op.equals("!=")) {
+			int L1 = frame.getNewLabel();
+			int L2 = frame.getNewLabel();
+			
+			emit(JVM.IF_ICMPNE + " " + "Label" + L1);
+			emit(JVM.ICONST_0);
+			emit(JVM.GOTO + " " + "Label" + L2);
+			emitLabel(L1);
+			emit(JVM.ICONST_1);
+			emitLabel(L2);
+		} else {
+			//maybe error
+		}
 	}
 
 	public void visit(UnaryExpr x) {
