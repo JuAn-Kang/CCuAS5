@@ -726,6 +726,18 @@ public class Emitter implements Visitor {
 		Decl D = (Decl) x.Ident.declAST;
 		Type T = typeOfDecl (D);
 		//TBD: your code goes here...
+		if(D.isGlobal())
+		{
+			emitStaticVariableReference(x.Ident, typeOfDecl(x.Ident.declAST), true);
+		} else {
+			if(T.Tequal(StdEnvironment.intType) || T.Tequal(StdEnvironment.boolType)) {
+				emitILOAD(D.index);
+			} else if (T.Tequal(StdEnvironment.floatType)) {
+				emitFLOAD(D.index);
+			} else {
+				assert(false);
+			}
+		}
 	}
 
 	public void visit(AssignExpr x) {
@@ -880,15 +892,12 @@ public class Emitter implements Visitor {
 		//TBD: here you have to emit an ICONST instruction to load the integer literal
 		//		onto the JVM stack. (see emitICONST).
 		emitICONST(x.GetValue());
-		
-
 	} 
 
 	public void visit(FloatLiteral x) {
 		//emit("; FloatLiteral: " + x.Lexeme + "\n");
 		//TBD: same for float
 		emitFCONST(Float.parseFloat(x.Lexeme));
-
 	} 
 
 	public void visit(BoolLiteral x) {
@@ -898,7 +907,6 @@ public class Emitter implements Visitor {
 			emitBCONST(true);
 		else if (x.Lexeme.equals("false"))
 			emitBCONST(false);
-
 	} 
 
 	public void visit(StringLiteral x) {
