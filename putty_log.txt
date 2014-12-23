@@ -1,0 +1,1435 @@
+login as: u0640353
+u0640353@elc1.cs.yonsei.ac.kr's password:
+Last login: Mon Dec 22 02:27:29 2014 from 210.118.74.204
+-bash-4.2$ ls
+CCuAS2  CCuAS3  CCuAS4  CCuAS5
+-bash-4.2$ vim .bash_profile
+-bash-4.2$ ls
+CCuAS2  CCuAS3  CCuAS4  CCuAS5
+-bash-4.2$ git init
+Initialized empty Git repository in /home/ccugrad2014/u0640353/.git/
+-bash-4.2$ git remote add origin https://github.com/erynet/CCuAS5.git
+-bash-4.2$ git pull
+remote: Counting objects: 210, done.
+remote: Compressing objects: 100% (137/137), done.
+remote: Total 210 (delta 60), reused 197 (delta 47)
+Receiving objects: 100% (210/210), 109.41 KiB | 121.00 KiB/s, done.
+Resolving deltas: 100% (60/60), done.
+From https://github.com/erynet/CCuAS5
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+-bash-4.2$ ls
+CCuAS2  CCuAS3  CCuAS4  CCuAS5
+-bash-4.2$ ls
+CCuAS2  CCuAS3  CCuAS4  CCuAS5  MiniC
+-bash-4.2$ cd MiniC/
+-bash-4.2$ make
+javac -g lang/System.java
+javac -g ErrorReporter.java
+javac -g TreeDrawer/DrawerFrame.java
+javac -g TreeDrawer/Polygon.java
+javac -g TreeDrawer/Drawer.java
+javac -g TreeDrawer/LayoutVisitor.java
+javac -g TreeDrawer/DrawingTree.java
+javac -g TreeDrawer/DrawerPanel.java
+javac -g TreeDrawer/Polyline.java
+javac -g TreePrinter/TreePrinterVisitor.java
+javac -g TreePrinter/Printer.java
+javac -g Parser/SyntaxError.java
+-bash-4.2$ cd scripts/
+-bash-4.2$ ls
+code_test.sh  README.txt
+-bash-4.2$ chmod 777 code_test.sh
+-bash-4.2$ cd ..
+-bash-4.2$ ./scripts/code_test.sh
+Testing code generation...
+Error: Could not find or load main class MiniC.MiniC
+Could not generate Assignment.j
+Error: Could not find or load main class MiniC.MiniC
+Could not generate Coercion.j
+Error: Could not find or load main class MiniC.MiniC
+Could not generate euclid.j
+Error: Could not find or load main class MiniC.MiniC
+Could not generate factorial.j
+Error: Could not find or load main class MiniC.MiniC
+Could not generate fibonacci.j
+Error: Could not find or load main class MiniC.MiniC
+Could not generate FunctionCall.j
+Error: Could not find or load main class MiniC.MiniC
+Could not generate HelloWorld.j
+Error: Could not find or load main class MiniC.MiniC
+Could not generate If.j
+Error: Could not find or load main class MiniC.MiniC
+Could not generate Intliteral.j
+Error: Could not find or load main class MiniC.MiniC
+Could not generate Literals.j
+Error: Could not find or load main class MiniC.MiniC
+Could not generate Shortcircuit.j
+
+Testing finished, pls. consult the test report in ./CodeGen/results.
+0 out of 11 testcases succeeded.
+-bash-4.2$ ls
+Parser
+-bash-4.2$ cd ..
+-bash-4.2$ ls
+CCuAS2  CCuAS3  CCuAS4  CCuAS5  MiniC
+-bash-4.2$ cd MiniC/
+-bash-4.2$ make
+javac -g lang/System.java
+javac -g ErrorReporter.java
+ErrorReporter.java:3: error: package MiniC.Scanner does not exist
+import MiniC.Scanner.SourcePos;
+                    ^
+ErrorReporter.java:14: error: cannot find symbol
+  public void reportError(String message, String tokenName, SourcePos pos) {
+                                                            ^
+  symbol:   class SourcePos
+  location: class ErrorReporter
+2 errors
+make: *** [ErrorReporter.class] Error 1
+-bash-4.2$ cd ..
+-bash-4.2$ ls
+CCuAS2  CCuAS3  CCuAS4  CCuAS5
+-bash-4.2$ vim .bash_profile
+-bash-4.2$ cd CCuAS
+CCuAS2/ CCuAS3/ CCuAS4/ CCuAS5/
+-bash-4.2$ cd CCuAS5
+-bash-4.2$ ls
+-bash-4.2$ git init
+Initialized empty Git repository in /home/ccugrad2014/u0640353/CCuAS5/.git/
+-bash-4.2$ git remote add origin https://github.com/erynet/CCuAS5.git
+-bash-4.2$ git pull
+remote: Counting objects: 214, done.
+remote: Compressing objects: 100% (140/140), done.
+remote: Total 214 (delta 62), reused 199 (delta 47)
+Receiving objects: 100% (214/214), 109.51 KiB | 131.00 KiB/s, done.
+Resolving deltas: 100% (62/62), done.
+From https://github.com/erynet/CCuAS5
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+-bash-4.2$ git pull -u origin master
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+-bash-4.2$ ls
+MiniC
+-bash-4.2$ cd MiniC/
+-bash-4.2$ make
+javac -g lang/System.java
+javac -g ErrorReporter.java
+javac -g TreeDrawer/DrawerFrame.java
+javac -g TreeDrawer/Polygon.java
+javac -g TreeDrawer/Drawer.java
+javac -g TreePrinter/TreePrinterVisitor.java
+javac -g TreePrinter/Printer.java
+javac -g Parser/SyntaxError.java
+-bash-4.2$ cd CodeGen/
+-bash-4.2$ ls
+Emitter.java  Frame.java  JVM.java  tst
+-bash-4.2$ git pull -u origin master
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 4 (delta 2), reused 4 (delta 2)
+Unpacking objects: 100% (4/4), done.
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+Updating 10c80ba..4659a8a
+Fast-forward
+ MiniC/Makefile | 3 ---
+ 1 file changed, 3 deletions(-)
+-bash-4.2$ ls
+Emitter.java  Frame.java  JVM.java  tst
+-bash-4.2$ cd ..
+-bash-4.2$ ls
+AstGen               ErrorReporter.java  MiniC.class  provided_classfiles  SemanticAnalysis      TreeDrawer
+CodeGen              lang                MiniC.java   Scanner              StdEnvironment.class  TreePrinter
+ErrorReporter.class  Makefile            Parser       scripts              StdEnvironment.java   Unparser
+-bash-4.2$ make
+javac -g Scanner/SourceFile.java
+javac -g Scanner/Token.java
+javac -g SemanticAnalysis/IdEntry.java
+javac -g SemanticAnalysis/ScopeStack.java
+javac -g SemanticAnalysis/SemanticAnalysis.java
+javac -g CodeGen/Emitter.java
+javac -g Unparser/UnparseVisitor.java
+javac -g Unparser/Unparser.java
+-bash-4.2$ make clean
+rm -f lang/System.class ErrorReporter.class TreeDrawer/DrawerFrame.class TreeDrawer/Polygon.class TreeDrawer/Drawer.class                                                                                                                   TreeDrawer/LayoutVisitor.class TreeDrawer/DrawingTree.class TreeDrawer/DrawerPanel.class TreeDrawer/Polyline.class TreeP                                                                                                                  rinter/TreePrinterVisitor.class TreePrinter/Printer.class Parser/SyntaxError.class Scanner/SourceFile.class Scanner/Token                                                                                                                  .class Scanner/SourcePos.class SemanticAnalysis/IdEntry.class SemanticAnalysis/ScopeStack.class SemanticAnalysis/Semantic                                                                                                                  Analysis.class CodeGen/Emitter.class CodeGen/Frame.class CodeGen/JVM.class Unparser/UnparseVisitor.class Unparser/Unparse                                                                                                                  r.class StdEnvironment.class AstGen/StringExpr.class AstGen/ExprSequence.class AstGen/StmtSequence.class AstGen/EmptyForm                                                                                                                  alParamDecl.class AstGen/ForStmt.class AstGen/VarDecl.class AstGen/Expr.class AstGen/IntType.class AstGen/VoidType.class                                                                                                                   AstGen/AssignExpr.class AstGen/ReturnStmt.class AstGen/FloatType.class AstGen/DeclSequence.class AstGen/Decl.class AstGen                                                                                                                  /Visitor.class AstGen/ActualParam.class AstGen/CompoundStmt.class AstGen/FloatLiteral.class AstGen/BinaryExpr.class AstGe                                                                                                                  n/VarExpr.class AstGen/FormalParamDeclSequence.class AstGen/EmptyCompoundStmt.class AstGen/ActualParamSequence.class AstG                                                                                                                  en/BoolType.class AstGen/UnaryExpr.class AstGen/IntExpr.class AstGen/EmptyStmt.class AstGen/ID.class AstGen/BoolLiteral.c                                                                                                                  lass AstGen/EmptyActualParam.class AstGen/Operator.class AstGen/BoolExpr.class AstGen/Terminal.class AstGen/FloatExpr.cla                                                                                                                  ss AstGen/Stmt.class AstGen/ArrayExpr.class AstGen/IfStmt.class AstGen/AssignStmt.class AstGen/CallExpr.class AstGen/Type                                                                                                                  .class AstGen/FormalParamDecl.class AstGen/EmptyDecl.class AstGen/ErrorType.class AstGen/IntLiteral.class AstGen/AST.clas                                                                                                                  s AstGen/Program.class AstGen/FunDecl.class AstGen/StringType.class AstGen/StringLiteral.class AstGen/EmptyExpr.class Ast                                                                                                                  Gen/CallStmt.class AstGen/ArrayType.class AstGen/WhileStmt.class
+-bash-4.2$ make
+javac -g lang/System.java
+javac -g ErrorReporter.java
+javac -g TreeDrawer/DrawerFrame.java
+javac -g TreeDrawer/Polygon.java
+javac -g TreeDrawer/Drawer.java
+javac -g TreePrinter/TreePrinterVisitor.java
+javac -g TreePrinter/Printer.java
+javac -g Parser/SyntaxError.java
+javac -g Scanner/SourceFile.java
+javac -g Scanner/Token.java
+javac -g SemanticAnalysis/IdEntry.java
+javac -g SemanticAnalysis/ScopeStack.java
+javac -g SemanticAnalysis/SemanticAnalysis.java
+javac -g CodeGen/Emitter.java
+javac -g Unparser/UnparseVisitor.java
+javac -g Unparser/Unparser.java
+-bash-4.2$ cd CodeGen/
+-bash-4.2$ ls
+Emitter.class  Emitter.java  Frame.class  Frame.java  JVM.class  JVM.java  tst
+-bash-4.2$ cd ..
+-bash-4.2$ cd AstGen/
+-bash-4.2$ ls
+ActualParam.class          CompoundStmt.java           FloatType.class                Stmt.java
+ActualParam.java           Decl.class                  FloatType.java                 StmtSequence.class
+ActualParamSequence.class  Decl.java                   FormalParamDecl.class          StmtSequence.java
+ActualParamSequence.java   DeclSequence.class          FormalParamDecl.java           StringExpr.class
+ArrayExpr.class            DeclSequence.java           FormalParamDeclSequence.class  StringExpr.java
+ArrayExpr.java             EmptyActualParam.class      FormalParamDeclSequence.java   StringLiteral.class
+ArrayType.class            EmptyActualParam.java       ForStmt.class                  StringLiteral.java
+ArrayType.java             EmptyCompoundStmt.class     ForStmt.java                   StringType.class
+AssignExpr.class           EmptyCompoundStmt.java      FunDecl.class                  StringType.java
+AssignExpr.java            EmptyDecl.class             FunDecl.java                   Terminal.class
+AssignStmt.class           EmptyDecl.java              ID.class                       Terminal.java
+AssignStmt.java            EmptyExpr.class             ID.java                        Type.class
+AST.class                  EmptyExpr.java              IfStmt.class                   TypeDecl.class
+AST.java                   EmptyFormalParamDecl.class  IfStmt.java                    TypeDecl.java
+BinaryExpr.class           EmptyFormalParamDecl.java   IntExpr.class                  Type.java
+BinaryExpr.java            EmptyStmt.class             IntExpr.java                   UnaryExpr.class
+BoolExpr.class             EmptyStmt.java              IntLiteral.class               UnaryExpr.java
+BoolExpr.java              ErrorType.class             IntLiteral.java                VarDecl.class
+BoolLiteral.class          ErrorType.java              IntType.class                  VarDecl.java
+BoolLiteral.java           Expr.class                  IntType.java                   VarExpr.class
+BoolType.class             Expr.java                   Operator.class                 VarExpr.java
+BoolType.java              ExprSequence.class          Operator.java                  Visitor.class
+CallExpr.class             ExprSequence.java           Program.class                  Visitor.java
+CallExpr.java              FloatExpr.class             Program.java                   VoidType.class
+CallStmt.class             FloatExpr.java              ReturnStmt.class               VoidType.java
+CallStmt.java              FloatLiteral.class          ReturnStmt.java                WhileStmt.class
+CompoundStmt.class         FloatLiteral.java           Stmt.class                     WhileStmt.java
+-bash-4.2$ cd ..
+-bash-4.2$ ./scripts/code_test.sh
+Testing code generation...
+Exception in thread "main" java.lang.VerifyError: (class: Assignment, method: main signature: ([Ljava/lang/String;)V) Una                                                                                                                  ble to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Coercion, method: main signature: ([Ljava/lang/String;)V) Unabl                                                                                                                  e to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file euclid
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file factorial
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file fibonacci
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file FunctionCall
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
++Exception in thread "main" java.lang.VerifyError: (class: Intliteral, method: main signature: ([Ljava/lang/String;)V) Un                                                                                                                  able to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Literals, method: main signature: ([Ljava/lang/String;)V) Unabl                                                                                                                  e to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Shortcircuit, method: f signature: ()Z) Unable to pop operand o                                                                                                                  ff an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
++
+Testing finished, pls. consult the test report in ./CodeGen/results.
+2 out of 11 testcases succeeded.
+-bash-4.2$ make
+make: Nothing to be done for `default'.
+-bash-4.2$ cd ..
+-bash-4.2$ ls
+MiniC
+-bash-4.2$ cd MiniC/
+-bash-4.2$ make
+make: Nothing to be done for `default'.
+-bash-4.2$ make cleam
+make: *** No rule to make target `cleam'.  Stop.
+-bash-4.2$ make clean
+rm -f lang/System.class ErrorReporter.class TreeDrawer/DrawerFrame.class TreeDrawer/Polygon.class TreeDrawer/Drawer.class TreeDrawer/LayoutVisitor.class TreeDrawer/DrawingTree.class TreeDrawer/DrawerPanel.class TreeDra                 wer/Polyline.class TreePrinter/TreePrinterVisitor.class TreePrinter/Printer.class Parser/SyntaxError.class Scanner/SourceFile.class Scanner/Token.class Scanner/SourcePos.class SemanticAnalysis/IdEntry.class SemanticAna                 lysis/ScopeStack.class SemanticAnalysis/SemanticAnalysis.class CodeGen/Emitter.class CodeGen/Frame.class CodeGen/JVM.class Unparser/UnparseVisitor.class Unparser/Unparser.class StdEnvironment.class AstGen/StringExpr.cl                 ass AstGen/ExprSequence.class AstGen/StmtSequence.class AstGen/EmptyFormalParamDecl.class AstGen/ForStmt.class AstGen/VarDecl.class AstGen/Expr.class AstGen/IntType.class AstGen/VoidType.class AstGen/AssignExpr.class A                 stGen/ReturnStmt.class AstGen/FloatType.class AstGen/DeclSequence.class AstGen/Decl.class AstGen/Visitor.class AstGen/ActualParam.class AstGen/CompoundStmt.class AstGen/FloatLiteral.class AstGen/BinaryExpr.class AstGen                 /VarExpr.class AstGen/FormalParamDeclSequence.class AstGen/EmptyCompoundStmt.class AstGen/ActualParamSequence.class AstGen/BoolType.class AstGen/UnaryExpr.class AstGen/IntExpr.class AstGen/EmptyStmt.class AstGen/ID.cla                 ss AstGen/BoolLiteral.class AstGen/EmptyActualParam.class AstGen/Operator.class AstGen/BoolExpr.class AstGen/Terminal.class AstGen/FloatExpr.class AstGen/Stmt.class AstGen/ArrayExpr.class AstGen/IfStmt.class AstGen/Ass                 ignStmt.class AstGen/CallExpr.class AstGen/Type.class AstGen/FormalParamDecl.class AstGen/EmptyDecl.class AstGen/ErrorType.class AstGen/IntLiteral.class AstGen/AST.class AstGen/Program.class AstGen/FunDecl.class AstGen                 /StringType.class AstGen/StringLiteral.class AstGen/EmptyExpr.class AstGen/CallStmt.class AstGen/ArrayType.class AstGen/WhileStmt.class
+-bash-4.2$ make
+javac -g lang/System.java
+javac -g ErrorReporter.java
+javac -g TreeDrawer/DrawerFrame.java
+javac -g TreeDrawer/Polygon.java
+javac -g TreeDrawer/Drawer.java
+javac -g TreePrinter/TreePrinterVisitor.java
+javac -g TreePrinter/Printer.java
+javac -g Parser/SyntaxError.java
+javac -g Scanner/SourceFile.java
+javac -g Scanner/Token.java
+javac -g SemanticAnalysis/IdEntry.java
+javac -g SemanticAnalysis/ScopeStack.java
+javac -g SemanticAnalysis/SemanticAnalysis.java
+javac -g CodeGen/Emitter.java
+javac -g Unparser/UnparseVisitor.java
+javac -g Unparser/Unparser.java
+-bash-4.2$ ./scripts/code_test.sh
+Testing code generation...
+Exception in thread "main" java.lang.VerifyError: (class: Assignment, method: main signature: ([Ljava/lang/String;)V) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Coercion, method: main signature: ([Ljava/lang/String;)V) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file euclid
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file factorial
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file fibonacci
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file FunctionCall
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
++Exception in thread "main" java.lang.VerifyError: (class: Intliteral, method: main signature: ([Ljava/lang/String;)V) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Literals, method: main signature: ([Ljava/lang/String;)V) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Shortcircuit, method: ff signature: ()Z) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
++
+Testing finished, pls. consult the test report in ./CodeGen/results.
+2 out of 11 testcases succeeded.
+-bash-4.2$ cd CodeGen/
+-bash-4.2$ ls
+Emitter.class  Emitter.java  Frame.class  Frame.java  JVM.class  JVM.java  results  tst
+-bash-4.2$ cd results/
+-bash-4.2$ ls
+diff_Assignment  diff_euclid     diff_fibonacci     diff_If          diff_Literals  res_Assignment  res_euclid     res_fibonacci     res_If          res_Literals
+diff_Coercion    diff_factorial  diff_FunctionCall  diff_Intliteral  report.txt     res_Coercion    res_factorial  res_FunctionCall  res_Intliteral
+-bash-4.2$ vim report.txt
+
+[1]+  Stopped                 vim report.txt
+-bash-4.2$ cd ..
+-bash-4.2$ ls
+Emitter.class  Emitter.java  Frame.class  Frame.java  JVM.class  JVM.java  results  tst
+-bash-4.2$ cd ..
+-bash-4.2$ ls
+Assignment.class  CodeGen         ErrorReporter.class  euclid.j         fibonacci.class     FunctionCall.j  Intliteral.class  Literals.class  MiniC.class.old  provided_classfiles  SemanticAnalysis      TreeDrawer
+Assignment.j      Coercion.class  ErrorReporter.java   factorial.class  fibonacci.j         If.class        Intliteral.j      Literals.j      MiniC.java       Scanner              StdEnvironment.class  TreePrinter
+AstGen            Coercion.j      euclid.class         factorial.j      FunctionCall.class  If.j            lang              Makefile        Parser           scripts              StdEnvironment.java   Unparser
+-bash-4.2$ cd ..
+-bash-4.2$ ls
+MiniC
+-bash-4.2$ git pull
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 4 (delta 2), reused 4 (delta 2)
+Unpacking objects: 100% (4/4), done.
+From https://github.com/erynet/CCuAS5
+   10c80ba..70ad903  master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+-bash-4.2$ git pull -u origin master
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+Updating 4659a8a..70ad903
+Fast-forward
+ MiniC/Makefile | 1 +
+ 1 file changed, 1 insertion(+)
+-bash-4.2$ git pull -u origin master
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+Already up-to-date.
+-bash-4.2$ cd MiniC/
+-bash-4.2$ make
+javac -g MiniC.java
+-bash-4.2$ ./scripts/code_test.sh
+Testing code generation...
+Exception in thread "main" java.lang.NoSuchMethodError: MiniC.MiniC.main(Ljava/lang/StringBuffer;)Ljava/lang/String;
+        at MiniC.Scanner.Scanner.scanToken(Scanner.java:72)
+        at MiniC.Scanner.Scanner.scan(Scanner.java:47)
+        at MiniC.Parser.Parser.parse(Parser.java:34)
+        at MiniC.MiniC.compileProgram(MiniC.java:71)
+        at MiniC.MiniC.main(MiniC.java:166)
+Assignment.j: JAS Error: empty source file.
+Assignment.j: Found 1 errors
+Could not generate Assignment.class
+Exception in thread "main" java.lang.NoSuchMethodError: MiniC.MiniC.main(Ljava/lang/StringBuffer;)Ljava/lang/String;
+        at MiniC.Scanner.Scanner.scanToken(Scanner.java:72)
+        at MiniC.Scanner.Scanner.scan(Scanner.java:47)
+        at MiniC.Parser.Parser.parse(Parser.java:34)
+        at MiniC.MiniC.compileProgram(MiniC.java:71)
+        at MiniC.MiniC.main(MiniC.java:166)
+Coercion.j: JAS Error: empty source file.
+Coercion.j: Found 1 errors
+Could not generate Coercion.class
+Exception in thread "main" java.lang.NoSuchMethodError: MiniC.MiniC.main(Ljava/lang/StringBuffer;)Ljava/lang/String;
+        at MiniC.Scanner.Scanner.scanToken(Scanner.java:72)
+        at MiniC.Scanner.Scanner.scan(Scanner.java:47)
+        at MiniC.Parser.Parser.parse(Parser.java:34)
+        at MiniC.MiniC.compileProgram(MiniC.java:71)
+        at MiniC.MiniC.main(MiniC.java:166)
+euclid.j: JAS Error: empty source file.
+euclid.j: Found 1 errors
+Could not generate euclid.class
+Exception in thread "main" java.lang.NoSuchMethodError: MiniC.MiniC.main(Ljava/lang/StringBuffer;)Ljava/lang/String;
+        at MiniC.Scanner.Scanner.scanToken(Scanner.java:72)
+        at MiniC.Scanner.Scanner.scan(Scanner.java:47)
+        at MiniC.Parser.Parser.parse(Parser.java:34)
+        at MiniC.MiniC.compileProgram(MiniC.java:71)
+        at MiniC.MiniC.main(MiniC.java:166)
+factorial.j: JAS Error: empty source file.
+factorial.j: Found 1 errors
+Could not generate factorial.class
+Exception in thread "main" java.lang.NoSuchMethodError: MiniC.MiniC.main(Ljava/lang/StringBuffer;)Ljava/lang/String;
+        at MiniC.Scanner.Scanner.scanToken(Scanner.java:72)
+        at MiniC.Scanner.Scanner.scan(Scanner.java:47)
+        at MiniC.Parser.Parser.parse(Parser.java:34)
+        at MiniC.MiniC.compileProgram(MiniC.java:71)
+        at MiniC.MiniC.main(MiniC.java:166)
+fibonacci.j: JAS Error: empty source file.
+fibonacci.j: Found 1 errors
+Could not generate fibonacci.class
+Exception in thread "main" java.lang.NoSuchMethodError: MiniC.MiniC.main(Ljava/lang/StringBuffer;)Ljava/lang/String;
+        at MiniC.Scanner.Scanner.scanToken(Scanner.java:72)
+        at MiniC.Scanner.Scanner.scan(Scanner.java:47)
+        at MiniC.Parser.Parser.parse(Parser.java:34)
+        at MiniC.MiniC.compileProgram(MiniC.java:71)
+        at MiniC.MiniC.main(MiniC.java:166)
+FunctionCall.j: JAS Error: empty source file.
+FunctionCall.j: Found 1 errors
+Could not generate FunctionCall.class
+Exception in thread "main" java.lang.NoSuchMethodError: MiniC.MiniC.main(Ljava/lang/StringBuffer;)Ljava/lang/String;
+        at MiniC.Scanner.Scanner.scanToken(Scanner.java:72)
+        at MiniC.Scanner.Scanner.scan(Scanner.java:47)
+        at MiniC.Parser.Parser.parse(Parser.java:34)
+        at MiniC.MiniC.compileProgram(MiniC.java:71)
+        at MiniC.MiniC.main(MiniC.java:166)
+HelloWorld.j: JAS Error: empty source file.
+HelloWorld.j: Found 1 errors
+Could not generate HelloWorld.class
+Exception in thread "main" java.lang.NoSuchMethodError: MiniC.MiniC.main(Ljava/lang/StringBuffer;)Ljava/lang/String;
+        at MiniC.Scanner.Scanner.scanToken(Scanner.java:72)
+        at MiniC.Scanner.Scanner.scan(Scanner.java:47)
+        at MiniC.Parser.Parser.parse(Parser.java:34)
+        at MiniC.MiniC.compileProgram(MiniC.java:71)
+        at MiniC.MiniC.main(MiniC.java:166)
+If.j: JAS Error: empty source file.
+If.j: Found 1 errors
+Could not generate If.class
+Exception in thread "main" java.lang.NoSuchMethodError: MiniC.MiniC.main(Ljava/lang/StringBuffer;)Ljava/lang/String;
+        at MiniC.Scanner.Scanner.scanToken(Scanner.java:72)
+        at MiniC.Scanner.Scanner.scan(Scanner.java:47)
+        at MiniC.Parser.Parser.parse(Parser.java:34)
+        at MiniC.MiniC.compileProgram(MiniC.java:71)
+        at MiniC.MiniC.main(MiniC.java:166)
+Intliteral.j: JAS Error: empty source file.
+Intliteral.j: Found 1 errors
+Could not generate Intliteral.class
+Exception in thread "main" java.lang.NoSuchMethodError: MiniC.MiniC.main(Ljava/lang/StringBuffer;)Ljava/lang/String;
+        at MiniC.Scanner.Scanner.scanToken(Scanner.java:72)
+        at MiniC.Scanner.Scanner.scan(Scanner.java:47)
+        at MiniC.Parser.Parser.parse(Parser.java:34)
+        at MiniC.MiniC.compileProgram(MiniC.java:71)
+        at MiniC.MiniC.main(MiniC.java:166)
+Literals.j: JAS Error: empty source file.
+Literals.j: Found 1 errors
+Could not generate Literals.class
+Exception in thread "main" java.lang.NoSuchMethodError: MiniC.MiniC.main(Ljava/lang/StringBuffer;)Ljava/lang/String;
+        at MiniC.Scanner.Scanner.scanToken(Scanner.java:72)
+        at MiniC.Scanner.Scanner.scan(Scanner.java:47)
+        at MiniC.Parser.Parser.parse(Parser.java:34)
+        at MiniC.MiniC.compileProgram(MiniC.java:71)
+        at MiniC.MiniC.main(MiniC.java:166)
+Shortcircuit.j: JAS Error: empty source file.
+Shortcircuit.j: Found 1 errors
+Could not generate Shortcircuit.class
+
+Testing finished, pls. consult the test report in ./CodeGen/results.
+0 out of 11 testcases succeeded.
+-bash-4.2$ git pull -u origin master
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (1/1), done.
+Unpacking objects: 100% (4/4), done.
+remote: Total 4 (delta 2), reused 4 (delta 2)
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+Updating 70ad903..5e52fac
+Fast-forward
+ MiniC/Makefile | 1 -
+ 1 file changed, 1 deletion(-)
+-bash-4.2$ make
+make: Nothing to be done for `default'.
+-bash-4.2$ make clean
+rm -f lang/System.class ErrorReporter.class TreeDrawer/DrawerFrame.class TreeDrawer/Polygon.class TreeDrawer/Drawer.class TreeDrawer/LayoutVisitor.class TreeDrawer/DrawingTree.class TreeDrawer/DrawerPanel.class TreeDra                 wer/Polyline.class TreePrinter/TreePrinterVisitor.class TreePrinter/Printer.class Parser/SyntaxError.class Scanner/SourceFile.class Scanner/Token.class Scanner/SourcePos.class SemanticAnalysis/IdEntry.class SemanticAna                 lysis/ScopeStack.class SemanticAnalysis/SemanticAnalysis.class CodeGen/Emitter.class CodeGen/Frame.class CodeGen/JVM.class Unparser/UnparseVisitor.class Unparser/Unparser.class StdEnvironment.class AstGen/StringExpr.cl                 ass AstGen/ExprSequence.class AstGen/StmtSequence.class AstGen/EmptyFormalParamDecl.class AstGen/ForStmt.class AstGen/VarDecl.class AstGen/Expr.class AstGen/IntType.class AstGen/VoidType.class AstGen/AssignExpr.class A                 stGen/ReturnStmt.class AstGen/FloatType.class AstGen/DeclSequence.class AstGen/Decl.class AstGen/Visitor.class AstGen/ActualParam.class AstGen/CompoundStmt.class AstGen/FloatLiteral.class AstGen/BinaryExpr.class AstGen                 /VarExpr.class AstGen/FormalParamDeclSequence.class AstGen/EmptyCompoundStmt.class AstGen/ActualParamSequence.class AstGen/BoolType.class AstGen/UnaryExpr.class AstGen/IntExpr.class AstGen/EmptyStmt.class AstGen/ID.cla                 ss AstGen/BoolLiteral.class AstGen/EmptyActualParam.class AstGen/Operator.class AstGen/BoolExpr.class AstGen/Terminal.class AstGen/FloatExpr.class AstGen/Stmt.class AstGen/ArrayExpr.class AstGen/IfStmt.class AstGen/Ass                 ignStmt.class AstGen/CallExpr.class AstGen/Type.class AstGen/FormalParamDecl.class AstGen/EmptyDecl.class AstGen/ErrorType.class AstGen/IntLiteral.class AstGen/AST.class AstGen/Program.class AstGen/FunDecl.class AstGen                 /StringType.class AstGen/StringLiteral.class AstGen/EmptyExpr.class AstGen/CallStmt.class AstGen/ArrayType.class AstGen/WhileStmt.class
+-bash-4.2$ make
+javac -g lang/System.java
+javac -g ErrorReporter.java
+javac -g TreeDrawer/DrawerFrame.java
+javac -g TreeDrawer/Polygon.java
+javac -g TreeDrawer/Drawer.java
+javac -g TreePrinter/TreePrinterVisitor.java
+javac -g TreePrinter/Printer.java
+javac -g Parser/SyntaxError.java
+javac -g Scanner/SourceFile.java
+javac -g Scanner/Token.java
+javac -g SemanticAnalysis/IdEntry.java
+javac -g SemanticAnalysis/ScopeStack.java
+javac -g SemanticAnalysis/SemanticAnalysis.java
+javac -g CodeGen/Emitter.java
+javac -g Unparser/UnparseVisitor.java
+javac -g Unparser/Unparser.java
+-bash-4.2$ ./scripts/code_test.sh
+Testing code generation...
+Exception in thread "main" java.lang.VerifyError: (class: Assignment, method: main signature: ([Ljava/lang/String;)V) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Coercion, method: main signature: ([Ljava/lang/String;)V) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file euclid
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file factorial
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file fibonacci
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file FunctionCall
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
++Exception in thread "main" java.lang.VerifyError: (class: Intliteral, method: main signature: ([Ljava/lang/String;
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Literals, method: main signature: ([Ljava/lang/String;)V)
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Shortcircuit, method: f signature: ()Z) Unable to pop ope
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
++
+Testing finished, pls. consult the test report in ./CodeGen/results.
+2 out of 11 testcases succeeded.
+-bash-4.2$
+login as: u0640353
+u0640353@elc1.cs.yonsei.ac.kr's password:
+Access denied
+u0640353@elc1.cs.yonsei.ac.kr's password:
+Last failed login: Wed Dec 24 00:28:08 KST 2014 from 210.118.74.204 on ssh:notty
+There was 1 failed login attempt since the last successful login.
+Last login: Tue Dec 23 01:39:01 2014 from 210.118.74.204
+-bash-4.2$ ls
+CCuAS2  CCuAS3  CCuAS4  CCuAS5
+-bash-4.2$ cd CCuAS5
+-bash-4.2$ ls
+MiniC
+-bash-4.2$ cd MiniC/
+-bash-4.2$ ls
+Assignment.class  CodeGen         ErrorReporter.class  euclid.j         fibonacci.class     FunctionCall.j  Intliteral.class  Literals.class  MiniC.class  provided_classfiles  SemanticAnalysis      TreeDrawer
+Assignment.j      Coercion.class  ErrorReporter.java   factorial.class  fibonacci.j         If.class        Intliteral.j      Literals.j      MiniC.java   Scanner              StdEnvironment.class  TreePrinter
+AstGen            Coercion.j      euclid.class         factorial.j      FunctionCall.class  If.j            lang              Makefile        Parser       scripts              StdEnvironment.java   Unparser
+-bash-4.2$ vim euclid.j
+
+[1]+  Stopped                 vim euclid.j
+-bash-4.2$ ls
+Assignment.class  CodeGen         ErrorReporter.class  euclid.j         fibonacci.class     FunctionCall.j  Intliteral.class  Literals.class  MiniC.class  provided_classfiles  SemanticAnalysis      TreeDrawer
+Assignment.j      Coercion.class  ErrorReporter.java   factorial.class  fibonacci.j         If.class        Intliteral.j      Literals.j      MiniC.java   Scanner              StdEnvironment.class  TreePrinter
+AstGen            Coercion.j      euclid.class         factorial.j      FunctionCall.class  If.j            lang              Makefile        Parser       scripts              StdEnvironment.java   Unparser
+-bash-4.2$ vim euclid.j
+
+[2]+  Stopped                 vim euclid.j
+-bash-4.2$ git pull
+remote: Counting objects: 13, done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 13 (delta 6), reused 10 (delta 3)
+Unpacking objects: 100% (13/13), done.
+From https://github.com/erynet/CCuAS5
+   70ad903..ba2e418  master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+-bash-4.2$ git config --local pull.default current
+-bash-4.2$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+-bash-4.2$ git pull origin master
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+Updating 5e52fac..ba2e418
+Fast-forward
+ .classpath                 |    6 +
+ .gitignore                 |    1 +
+ .project                   |   17 ++
+ MiniC/CodeGen/Emitter.java | 1727 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-----------------------------------------------------------------------------------------------------
+ 4 files changed, 878 insertions(+), 873 deletions(-)
+ create mode 100644 .classpath
+ create mode 100644 .gitignore
+ create mode 100644 .project
+-bash-4.2$ ls
+Assignment.class  CodeGen         ErrorReporter.class  euclid.j         fibonacci.class     FunctionCall.j  Intliteral.class  Literals.class  MiniC.class  provided_classfiles  SemanticAnalysis      TreeDrawer
+Assignment.j      Coercion.class  ErrorReporter.java   factorial.class  fibonacci.j         If.class        Intliteral.j      Literals.j      MiniC.java   Scanner              StdEnvironment.class  TreePrinter
+AstGen            Coercion.j      euclid.class         factorial.j      FunctionCall.class  If.j            lang              Makefile        Parser       scripts              StdEnvironment.java   Unparser
+-bash-4.2$ make
+javac -g CodeGen/Emitter.java
+-bash-4.2$ ./scripts/code_test.sh
+Testing code generation...
+Exception in thread "main" java.lang.VerifyError: (class: Assignment, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Coercion, method: main signature: ([Ljava/lang/String;)V) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file euclid
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file factorial
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file fibonacci
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file FunctionCall
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
++Exception in thread "main" java.lang.VerifyError: (class: If, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Intliteral, method: main signature: ([Ljava/lang/String;)V) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Literals, method: main signature: ([Ljava/lang/String;)V) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Shortcircuit, method: ff signature: ()Z) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
++
+Testing finished, pls. consult the test report in ./CodeGen/results.
+2 out of 11 testcases succeeded.
+-bash-4.2$ ls
+Assignment.class  CodeGen         ErrorReporter.class  euclid.j         fibonacci.class     FunctionCall.j  Intliteral.class  Literals.class  MiniC.class  provided_classfiles  SemanticAnalysis      TreeDrawer
+Assignment.j      Coercion.class  ErrorReporter.java   factorial.class  fibonacci.j         If.class        Intliteral.j      Literals.j      MiniC.java   Scanner              StdEnvironment.class  TreePrinter
+AstGen            Coercion.j      euclid.class         factorial.j      FunctionCall.class  If.j            lang              Makefile        Parser       scripts              StdEnvironment.java   Unparser
+-bash-4.2$ vim Assignment.j
+
+[3]+  Stopped                 vim Assignment.j
+-bash-4.2$ git pull origin master
+remote: Counting objects: 15, done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 15 (delta 9), reused 11 (delta 5)
+Unpacking objects: 100% (15/15), done.
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+Updating ba2e418..a614982
+Fast-forward
+ .classpath                 | 3 ++-
+ .gitignore                 | 2 ++
+ MiniC/CodeGen/Emitter.java | 3 +++
+ 3 files changed, 7 insertions(+), 1 deletion(-)
+-bash-4.2$ make
+javac -g CodeGen/Emitter.java
+CodeGen/Emitter.java:547: error: cannot find symbol
+                                        emitICONST(x.rAST.GetValue());
+                                                         ^
+  symbol:   method GetValue()
+  location: variable rAST of type Expr
+CodeGen/Emitter.java:550: error: cannot find symbol
+                                        emitFCONST(x.rAST.GetValue());
+                                                         ^
+  symbol:   method GetValue()
+  location: variable rAST of type Expr
+2 errors
+make: *** [CodeGen/Emitter.class] Error 1
+-bash-4.2$ git pull
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 5 (delta 4), reused 5 (delta 4)
+Unpacking objects: 100% (5/5), done.
+From https://github.com/erynet/CCuAS5
+   ba2e418..cf67fe6  master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+-bash-4.2$ git pull origin master
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+Updating a614982..cf67fe6
+Fast-forward
+ MiniC/CodeGen/Emitter.java | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+-bash-4.2$ make
+javac -g CodeGen/Emitter.java
+-bash-4.2$ ./scripts/code_test.sh
+Testing code generation...
+Exception in thread "main" java.lang.VerifyError: (class: Assignment, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Coercion, method: main signature: ([Ljava/lang/String;)V) Expecting to find float on stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file euclid
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file factorial
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file fibonacci
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file FunctionCall
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
++Exception in thread "main" java.lang.VerifyError: (class: If, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
++++
+Testing finished, pls. consult the test report in ./CodeGen/results.
+4 out of 11 testcases succeeded.
+-bash-4.2$ vim ./CodeGen/results/report.txt
+
+[4]+  Stopped                 vim ./CodeGen/results/report.txt
+-bash-4.2$ ls
+Assignment.class  CodeGen         ErrorReporter.class  euclid.j         fibonacci.class     FunctionCall.j  lang         MiniC.java           Scanner           StdEnvironment.class  TreePrinter
+Assignment.j      Coercion.class  ErrorReporter.java   factorial.class  fibonacci.j         If.class        Makefile     Parser               scripts           StdEnvironment.java   Unparser
+AstGen            Coercion.j      euclid.class         factorial.j      FunctionCall.class  If.j            MiniC.class  provided_classfiles  SemanticAnalysis  TreeDrawer
+-bash-4.2$ vim Assignment.j
+
+[5]+  Stopped                 vim Assignment.j
+-bash-4.2$ git pull origin master
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 10 (delta 8), reused 6 (delta 4)
+Unpacking objects: 100% (10/10), done.
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+Updating cf67fe6..2a4c9bb
+Fast-forward
+ MiniC/CodeGen/Emitter.java | 39 +++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 39 insertions(+)
+-bash-4.2$ make
+javac -g CodeGen/Emitter.java
+-bash-4.2$ ./scripts/code_test.sh
+Testing code generation...
+Exception in thread "main" java.lang.VerifyError: (class: Assignment, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Coercion, method: main signature: ([Ljava/lang/String;)V) Expecting to find float on stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file euclid
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
+Exception in thread "main" java.lang.VerifyError: (class: factorial, method: factorial signature: (I)I) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: fibonacci, method: fibonacci signature: (I)I) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.ClassFormatError: Arguments can't fit into locals in class file FunctionCall
+        at java.lang.ClassLoader.defineClass1(Native Method)
+        at java.lang.ClassLoader.defineClass(ClassLoader.java:800)
+        at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+        at java.net.URLClassLoader.defineClass(URLClassLoader.java:449)
+        at java.net.URLClassLoader.access$100(URLClassLoader.java:71)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+        at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+        at java.security.AccessController.doPrivileged(Native Method)
+        at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+        at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+        at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:482)
++Exception in thread "main" java.lang.VerifyError: (class: If, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
++++
+Testing finished, pls. consult the test report in ./CodeGen/results.
+4 out of 11 testcases succeeded.
+-bash-4.2$ vim Assignment.j
+
+[6]+  Stopped                 vim Assignment.j
+-bash-4.2$ git pull origin master
+remote: Counting objects: 15, done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 15 (delta 12), reused 7 (delta 4)
+Unpacking objects: 100% (15/15), done.
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+Updating 2a4c9bb..6321de7
+Fast-forward
+ MiniC/CodeGen/Emitter.java | 37 ++++++++++++++++++++++++++++++-------
+ 1 file changed, 30 insertions(+), 7 deletions(-)
+-bash-4.2$ make
+javac -g CodeGen/Emitter.java
+-bash-4.2$ ./scripts/code_test.sh
+Testing code generation...
+Exception in thread "main" java.lang.VerifyError: (class: Assignment, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Coercion, method: main signature: ([Ljava/lang/String;)V) Expecting to find float on stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: euclid, method: gcd signature: (II)I) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: factorial, method: factorial signature: (I)I) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: fibonacci, method: fibonacci signature: (I)I) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: FunctionCall, method: foo signature: (IZ)V) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
++Exception in thread "main" java.lang.VerifyError: (class: If, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+++Exception in thread "main" java.lang.VerifyError: (class: Shortcircuit, method: main signature: ([Ljava/lang/String;)V) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
++
+Testing finished, pls. consult the test report in ./CodeGen/results.
+4 out of 11 testcases succeeded.
+-bash-4.2$ git pull origin master
+remote: Counting objects: 10, done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 10 (delta 8), reused 6 (delta 4)
+Unpacking objects: 100% (10/10), done.
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+Updating 6321de7..9383302
+Fast-forward
+ MiniC/CodeGen/Emitter.java | 18 +++++++++++++-----
+ 1 file changed, 13 insertions(+), 5 deletions(-)
+-bash-4.2$ make
+javac -g CodeGen/Emitter.java
+-bash-4.2$ ./scripts/code_test.sh
+Testing code generation...
+Exception in thread "main" java.lang.VerifyError: (class: Assignment, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: Coercion, method: main signature: ([Ljava/lang/String;)V) Expecting to find float on stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: euclid, method: gcd signature: (II)I) Inconsistent stack height 3 != 0
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: factorial, method: factorial signature: (I)I) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: fibonacci, method: fibonacci signature: (I)I) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+++Exception in thread "main" java.lang.VerifyError: (class: If, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+++Exception in thread "main" java.lang.VerifyError: (class: Shortcircuit, method: main signature: ([Ljava/lang/String;)V) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
++
+Testing finished, pls. consult the test report in ./CodeGen/results.
+5 out of 11 testcases succeeded.
+-bash-4.2$ vim ./CodeGen/results/report.txt
+
+[7]+  Stopped                 vim ./CodeGen/results/report.txt
+-bash-4.2$ vim If.j
+
+[8]+  Stopped                 vim If.j
+-bash-4.2$ git pull origin master
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 5 (delta 4), reused 5 (delta 4)
+Unpacking objects: 100% (5/5), done.
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+Updating 9383302..a89acd4
+Fast-forward
+ MiniC/CodeGen/Emitter.java | 26 ++++++++++++++++++++++++--
+ 1 file changed, 24 insertions(+), 2 deletions(-)
+-bash-4.2$ make
+javac -g CodeGen/Emitter.java
+-bash-4.2$ ./scripts/code_test.sh
+Testing code generation...
+Exception in thread "main" java.lang.VerifyError: (class: Assignment, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
++Exception in thread "main" java.lang.VerifyError: (class: euclid, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: factorial, method: factorial signature: (I)I) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: fibonacci, method: fibonacci signature: (I)I) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+++Exception in thread "main" java.lang.VerifyError: (class: If, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+++Exception in thread "main" java.lang.VerifyError: (class: Shortcircuit, method: main signature: ([Ljava/lang/String;)V) Unable to pop operand off an empty stack
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
++
+Testing finished, pls. consult the test report in ./CodeGen/results.
+6 out of 11 testcases succeeded.
+-bash-4.2$ vim ./CodeGen/results/report.txt
+
+[9]+  Stopped                 vim ./CodeGen/results/report.txt
+-bash-4.2$ git pull origin master
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 5 (delta 4), reused 5 (delta 4)
+Unpacking objects: 100% (5/5), done.
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+Updating a89acd4..d5417e1
+Fast-forward
+ MiniC/CodeGen/Emitter.java | 111 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 110 insertions(+), 1 deletion(-)
+-bash-4.2$ make
+javac -g CodeGen/Emitter.java
+-bash-4.2$ make
+make: Nothing to be done for `default'.
+-bash-4.2$ ./scripts/code_test.sh
+Testing code generation...
+Exception in thread "main" java.lang.VerifyError: (class: Assignment, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
++Exception in thread "main" java.lang.VerifyError: (class: euclid, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: factorial, method: factorial signature: (I)I) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+Exception in thread "main" java.lang.VerifyError: (class: fibonacci, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
+++Exception in thread "main" java.lang.VerifyError: (class: If, method: main signature: ([Ljava/lang/String;)V) Illegal local variable number
+        at java.lang.Class.getDeclaredMethods0(Native Method)
+        at java.lang.Class.privateGetDeclaredMethods(Class.java:2615)
+        at java.lang.Class.getMethod0(Class.java:2856)
+        at java.lang.Class.getMethod(Class.java:1668)
+        at sun.launcher.LauncherHelper.getMainMethod(LauncherHelper.java:494)
+        at sun.launcher.LauncherHelper.checkAndLoadMain(LauncherHelper.java:486)
++++
+Testing finished, pls. consult the test report in ./CodeGen/results.
+6 out of 11 testcases succeeded.
+-bash-4.2$ vim ./CodeGen/results/report.txt
+
+[10]+  Stopped                 vim ./CodeGen/results/report.txt
+-bash-4.2$ vim Assignment.j
+
+[11]+  Stopped                 vim Assignment.j
+-bash-4.2$ git pull origin master
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 5 (delta 4), reused 5 (delta 4)
+Unpacking objects: 100% (5/5), done.
+From https://github.com/erynet/CCuAS5
+ * branch            master     -> FETCH_HEAD
+Updating d5417e1..35ffc36
+Fast-forward
+ MiniC/CodeGen/Emitter.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+-bash-4.2$ make
+javac -g CodeGen/Emitter.java
+-bash-4.2$ ./scripts/code_test.sh
+Testing code generation...
++++++++++++
+Testing finished, pls. consult the test report in ./CodeGen/results.
+11 out of 11 testcases succeeded.
+-bash-4.2$
