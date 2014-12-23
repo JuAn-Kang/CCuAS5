@@ -580,6 +580,23 @@ public class Emitter implements Visitor {
 		emit("; WhileStmt, line " + x.pos.StartLine);
 		// You should apply the template for while loops from the lecture slides.
 		// TBD:
+		int L1 = frame.getNewLabel();
+		int L2 = frame.getNewLabel();
+		
+		//L1:
+		emitLabel(L1);
+		
+		//	[[ E ]]
+		x.eAST.accept(this);
+		
+		//	ifeq L2
+		emit("ifeq Label" + L2);
+		
+		//	[[ S ]]
+		x.stmtAST.accept(this);
+		emit("goto Label" + L1);
+		//L2:
+		emitLabel(L2);
 	}
 
 	public void visit(ForStmt x) {
@@ -627,6 +644,8 @@ public class Emitter implements Visitor {
 		//		Relevant functions:
 		//						isGlobal()
 		//						frame.getNewLocalVarIndex
+		if(!(x.isGlobal()))
+			frame.getNewLocalVarIndex();
 	}
 
 	public void visit(DeclSequence x){
