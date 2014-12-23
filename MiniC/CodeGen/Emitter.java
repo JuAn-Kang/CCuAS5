@@ -1,6 +1,7 @@
 package MiniC.CodeGen;
 
 import java.io.*;
+
 import MiniC.AstGen.*;
 import MiniC.StdEnvironment;
 import MiniC.ErrorReporter;
@@ -544,10 +545,8 @@ public class Emitter implements Visitor {
 				emitStaticVariableReference(V.Ident, typeOfDecl(V.Ident.declAST), true);
 			} else {
 				if(T.Tequal(StdEnvironment.intType) || T.Tequal(StdEnvironment.boolType)) {
-					emitICONST(x.rAST.GetValue());
 					emitISTORE(D.index);
 				} else if (T.Tequal(StdEnvironment.floatType)) {
-					emitFCONST(x.rAST.GetValue());
 					emitFSTORE(D.index);
 				} else {
 					assert(false);
@@ -818,18 +817,25 @@ public class Emitter implements Visitor {
 		//emit("; IntLiteral: " + x.Lexeme + "\n");
 		//TBD: here you have to emit an ICONST instruction to load the integer literal
 		//		onto the JVM stack. (see emitICONST).
+		emitICONST(x.GetValue());
+		
 
 	} 
 
 	public void visit(FloatLiteral x) {
 		//emit("; FloatLiteral: " + x.Lexeme + "\n");
 		//TBD: same for float
+		emitFCONST(Float.parseFloat(x.Lexeme));
 
 	} 
 
 	public void visit(BoolLiteral x) {
 		//emit("; BoolLiteral: " + x.Lexeme + "\n");
 		//TBD: and bool...
+		if (x.Lexeme.equals("true"))
+			emitBCONST(true);
+		else if (x.Lexeme.equals("false"))
+			emitBCONST(false);
 
 	} 
 
