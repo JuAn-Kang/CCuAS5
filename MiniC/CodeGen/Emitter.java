@@ -499,6 +499,7 @@ public class Emitter implements Visitor {
 		//TBD: here you need to allocate a new local variable index to the
 		//		formal parameter.
 		//		Relevant: x.index, frame.getNewLocalVarIndex();
+		
 
 	}
 
@@ -538,6 +539,17 @@ public class Emitter implements Visitor {
 			//							emitISTORE()
 			//							emitFSTORE()
 			//
+			if(D.isGlobal()) {
+				emitStaticVariableReference(V.Ident, typeOfDecl(V.Ident.declAST), true);
+			} else {
+				if(T.Tequal(StdEnvironment.intType) || T.Tequal(StdEnvironment.boolType)) {
+					emitISTORE(D.index);
+				} else if (T.Tequal(StdEnvironment.floatType)) {
+					emitFSTORE(D.index);
+				} else {
+					assert(false);
+				}
+			}
 		} else {
 			assert(false); // Arrays not implemented.
 		}
