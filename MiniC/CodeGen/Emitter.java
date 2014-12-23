@@ -636,6 +636,7 @@ public class Emitter implements Visitor {
 		if(!(x.e2AST instanceof EmptyExpr)) {
 		    x.e2AST.accept(this);
 			emit(JVM.IFEQ + " " + "Label" + L3);
+			
 		}
 
 		x.stmtAST.accept(this);
@@ -726,8 +727,7 @@ public class Emitter implements Visitor {
 		Decl D = (Decl) x.Ident.declAST;
 		Type T = typeOfDecl (D);
 		//TBD: your code goes here..
-		if(D.isGlobal())
-		{
+		if(D.isGlobal()) {
 			emitStaticVariableReference(x.Ident, typeOfDecl(x.Ident.declAST), true);
 		} else {
 			if(T.Tequal(StdEnvironment.intType) || T.Tequal(StdEnvironment.boolType)) {
@@ -810,6 +810,7 @@ public class Emitter implements Visitor {
 		x.lAST.accept(this);
 		x.rAST.accept(this);
 		//TBD:
+		
 	}
 
 	public void visit(UnaryExpr x) {
@@ -829,6 +830,27 @@ public class Emitter implements Visitor {
 		//					iconst_0
 		//				Label2:
 		//TBD:
+		if(Op.equals("i2f")) {
+			emit(JVM.I2F);
+		} else if(Op.equals("+")) {
+			//nothing to do ..
+		} else if(Op.equals("-")) {
+			if(x.eAST.type.Tequal(StdEnvironment.intType)) {
+				emit(JVM.INEG);
+			} else {
+				emit(JVM.FNEG);
+			}
+		} else if(Op.equals("!")) {
+			int L1 = frame.getNewLabel();
+			int L2 = frame.getNewLabel();
+		
+			emit(JVM.IFNE + " " + "Label" + L1);
+			emit(JVM.ICONST_1);
+			emit(JVM.GOTO + " " + "Label" + L2);
+			emitLabel(L1);
+			emit(JVM.ICONST_0);
+			emitLabel(L2);
+		}
 	}
 
 	public void visit(EmptyExpr x) {
