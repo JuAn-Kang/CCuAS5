@@ -521,6 +521,7 @@ public class Emitter implements Visitor {
 	public void visit(AssignStmt x) {
 		emit("; AssignStmt, line " + x.pos.StartLine);
 		//x.lAST.accept(this);
+		
 		x.rAST.accept(this);
 		if (x.lAST instanceof VarExpr) {
 			VarExpr V = (VarExpr) x.lAST;
@@ -543,6 +544,7 @@ public class Emitter implements Visitor {
 				emitStaticVariableReference(V.Ident, typeOfDecl(V.Ident.declAST), true);
 			} else {
 				if(T.Tequal(StdEnvironment.intType) || T.Tequal(StdEnvironment.boolType)) {
+					emitICONST();
 					emitISTORE(D.index);
 				} else if (T.Tequal(StdEnvironment.floatType)) {
 					emitFSTORE(D.index);
