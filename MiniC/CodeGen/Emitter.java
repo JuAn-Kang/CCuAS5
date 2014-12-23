@@ -447,7 +447,7 @@ public class Emitter implements Visitor {
 	}
 
 	public void visit(EmptyDecl x) {
-	//emit("; EmptyDecl");
+		//emit("; EmptyDecl");
 	}
 
 	public void visit(FunDecl x) {
@@ -500,8 +500,7 @@ public class Emitter implements Visitor {
 		//TBD: here you need to allocate a new local variable index to the
 		//		formal parameter.
 		//		Relevant: x.index, frame.getNewLocalVarIndex();
-		
-
+		x.index = frame.getNewLocalVarIndex();
 	}
 
 	public void visit(FormalParamDeclSequence x) {
