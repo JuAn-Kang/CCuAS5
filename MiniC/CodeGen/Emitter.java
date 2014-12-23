@@ -725,7 +725,7 @@ public class Emitter implements Visitor {
 		//							emitILOAD(), emitFLOAD
 		Decl D = (Decl) x.Ident.declAST;
 		Type T = typeOfDecl (D);
-		//TBD: your code goes here...
+		//TBD: your code goes here..
 		if(D.isGlobal())
 		{
 			emitStaticVariableReference(x.Ident, typeOfDecl(x.Ident.declAST), true);
