@@ -688,7 +688,7 @@ public class Emitter implements Visitor {
 		//						isGlobal()
 		//						frame.getNewLocalVarIndex
 		if(!(x.isGlobal()))
-			frame.getNewLocalVarIndex();
+			x.index = frame.getNewLocalVarIndex();
 	}
 
 	public void visit(DeclSequence x){
