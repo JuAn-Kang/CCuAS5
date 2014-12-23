@@ -563,17 +563,40 @@ public class Emitter implements Visitor {
 		// After execution of this code, the stack will contain 0 if the condition
 		// evaluated to false, and 1 if the condition evaluated to true.
 		// You should apply the template for if statements from the lecture slides.
+		
+		
+		/*
+		 * if_icmpgt Label2
+   		 * iconst_0
+   		 * goto Label3
+  		 * Label2:
+   		 * iconst_1
+  		 * Label3:
+		 */		
+		
 		x.eAST.accept(this);
 		// Allocate 2 new labes for this if statement.
 		int L1 = frame.getNewLabel();
 		int L2 = frame.getNewLabel();
 		//TBD: your code goes here...
+		//if_icmpgt Label2
+		emit(JVM.IFEQ + " " + "Label" + L1);
+		
+		//iconst_0
 		x.thenAST.accept(this);
 		//TBD: your code goes here...
+		//goto Label3
+		emit(JVM.GOTO + " " + "Label" + L2);
+		//Label2:
+		emitLabel(L1);
+		
+		//iconst_1
 		if(x.elseAST != null) {
 			x.elseAST.accept(this);
 		}
 		//TBD: your code goes here...
+		//Label3:
+		emitLabel(L2);
 	}
 
 	public void visit(WhileStmt x) {
@@ -590,11 +613,11 @@ public class Emitter implements Visitor {
 		x.eAST.accept(this);
 		
 		//	ifeq L2
-		emit("ifeq Label" + L2);
+		emit(JVM.IFEQ + " " + "Label" + L2);
 		
 		//	[[ S ]]
 		x.stmtAST.accept(this);
-		emit("goto Label" + L1);
+		emit(JVM.GOTO + " " + "Label" + L1);
 		//L2:
 		emitLabel(L2);
 	}
@@ -613,7 +636,7 @@ public class Emitter implements Visitor {
 		emitLabel(L2);
 		if(!(x.e2AST instanceof EmptyExpr)) {
 		    x.e2AST.accept(this);
-			emit("ifeq Label" + L3);
+			emit(JVM.IFEQ + " " + "Label" + L3);
 		}
 
 		x.stmtAST.accept(this);
@@ -621,7 +644,7 @@ public class Emitter implements Visitor {
 		if(!(x.e3AST instanceof EmptyExpr))
 		    x.e3AST.accept(this);
 		
-		emit("goto Label" + L2);
+		emit(JVM.GOTO + " " + "Label" + L2);
 		emitLabel(L3);
 		emitLabel(L1);
 	}
