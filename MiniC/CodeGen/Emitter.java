@@ -604,6 +604,26 @@ public class Emitter implements Visitor {
 		// No template was given for "for" loops, but you can find out by compiling a
 		// Java "for" loop to bytecode, use "dejasmin" and look how it is done there.
 		// TBD:
+		
+		x.e1AST.accept(this);
+		int L1 = frame.getNewLabel();
+		int L2 = frame.getNewLabel();
+		int L3 = frame.getNewLabel();
+		
+		emitLabel(L2);
+		if(!(x.e2AST instanceof EmptyExpr)) {
+		    x.e2AST.accept(this);
+			emit("ifeq Label" + L3);
+		}
+
+		x.stmtAST.accept(this);
+		
+		if(!(x.e3AST instanceof EmptyExpr))
+		    x.e3AST.accept(this);
+		
+		emit("goto Label" + L2);
+		emitLabel(L3);
+		emitLabel(L1);
 	}
 
 	public void visit(ReturnStmt x) {
