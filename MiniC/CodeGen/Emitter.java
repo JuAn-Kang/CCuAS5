@@ -835,6 +835,7 @@ public class Emitter implements Visitor {
 			//TBD: in case of an instance method, you need emit an JVM.INVOKEVIRTUAL instruction.
 			//		the name of the function consists of <ClassName>/<functionname><functiondescriptor>.
 			//			Relevant variables/functions: see above for static methods.
+			emit(JVM.INVOKEVIRTUAL + " " + ClassName + "/" + x.idAST.Lexeme + getDescriptor(F));
 		}
 	}
 
