@@ -2,5 +2,6 @@
 <classpath>
 	<classpathentry kind="src" path=""/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="E:/수업자료/2014-2/컴파일러(벅스텔러)/assignment/구현/CCuAS5/MiniC/Scanner"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -544,9 +544,10 @@ public class Emitter implements Visitor {
 				emitStaticVariableReference(V.Ident, typeOfDecl(V.Ident.declAST), true);
 			} else {
 				if(T.Tequal(StdEnvironment.intType) || T.Tequal(StdEnvironment.boolType)) {
-					emitICONST();
+					emitICONST(x.rAST.GetValue());
 					emitISTORE(D.index);
 				} else if (T.Tequal(StdEnvironment.floatType)) {
+					emitFCONST(x.rAST.GetValue());
 					emitFSTORE(D.index);
 				} else {
 					assert(false);
